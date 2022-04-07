@@ -135,7 +135,7 @@ namespace BusyBulkCopy
                     }
                     catch (Exception ex)
                     {
-                        logger.Error(String.Format("Skipped invalid data in row {0}, field {1}, data type {2}, data {3} ", rownum, myField.Name, myField.DataType, myValue));
+                        logger.Error(String.Format("Skipped invalid data in row {0}, field {1}, data type {2}, data {3} , message {4}", rownum, myField.Name, myField.DataType, myValue, ex.Message));
                         return myField.GetNull();
                     }
                 case "bit":
